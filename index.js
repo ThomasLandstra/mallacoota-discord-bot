@@ -8,6 +8,8 @@ const client = new Client({partials: ["MESSAGE"]});
 const prefix = ".";
 const bugListID = "6070f74555ec8e82fbae4684";
 const bugLabelID = "6070f73dda9ba96c3e7ced5f";
+const commandsChannel = "835055020352339988";
+const testCommandsChannel = "835045334290923541";
 
 // Start Message
 client.on('ready', () => {
@@ -17,6 +19,7 @@ client.on('ready', () => {
 // Commands
 client.on('message', async message => {
     if (message.author.bot) return; // If message was sent by a got ignore
+    if (message.channel.id !== commandsChannel || message.channel.id !== testCommandsChannel) return;
     if (message.content.startsWith(prefix)){ // If the message was sent with the prefix
         // Split Command
         const [cmd, ...args] = message.content.trim().substring(prefix.length).split(/\s+/);
