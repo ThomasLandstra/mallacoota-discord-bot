@@ -19,7 +19,7 @@ client.on('ready', () => {
 // Commands
 client.on('message', async message => {
     if (message.author.bot) return; // If message was sent by a got ignore
-    if (message.channel.id !== commandsChannel || message.channel.id !== testCommandsChannel) return;
+    // if (message.channel.id !== commandsChannel || message.channel.id !== testCommandsChannel) return;
     if (message.content.startsWith(prefix)){ // If the message was sent with the prefix
         // Split Command
         const [cmd, ...args] = message.content.trim().substring(prefix.length).split(/\s+/);
