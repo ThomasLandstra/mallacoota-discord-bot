@@ -1,0 +1,28 @@
+  {
+  "name": "mallacoota-discord-bot",
+  "version": "1.0.0",
+  "description": "A discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/bot.js",
+    "dev": "nodemon ./src/bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasLandstra/mallacoota-discord-bot.git"
+  },
+  "author": "Thomas Landstra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThomasLandstra/mallacoota-discord-bot/issues"
+  },
+  "homepage": "https://github.com/ThomasLandstra/mallacoota-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0"
+  },
+  "engines": {
+    "node": "15.x"
+  }
+}
