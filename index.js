@@ -24,7 +24,7 @@ client.on('message', async message => {
         //Ping Command
         if(cmd === "ping"){
             try {
-                message.channel.send(`<@${message.author.id}> 🏓 API Latency is ${Math.round(client.ws.ping)}ms`);
+                message.channel.send(`<@${message.author.id}> 🏓Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
             } catch (error) {
                 try {
                     message.channel.send("Something went wrong");
