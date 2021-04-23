@@ -46,7 +46,6 @@ client.on('message', async message => {
 
             try {
                 message.channel.send(embed);
-                message.delete();
             } catch (error) {
                 console.log("Error sending message for help command: " + Date());
                 console.log(error);
