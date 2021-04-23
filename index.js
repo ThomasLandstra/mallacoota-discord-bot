@@ -36,7 +36,29 @@ client.on('message', async message => {
                 console.log(`Author: ${message.author.id}, In: ${message.channel.id}`);
                 console.log(error);
             }
-        } else if(cmd == "bug"){
+        } else if (cmd == "help") {
+            const embed = new MessageEmbed()
+                .setTitle("Mallacoota Bot Help Menu")
+                .setColor(2072139)
+                .setDescription('*Server Prefix is "."*')
+                .addField("Basic Commands", "**.help**  Displays a list of commands and gives a description.\n\n**.ping**  Command checks if the bot is online by making the bot send a message.\n\n**.bug <details>**  Command adds a bug to the Developmnt Trello.")
+                .setFooter(`${client.user.username}`, "https://cdn.discordapp.com/app-icons/765041878822813726/e01d25388af1ccb3347108a1fad425e8.png");
+
+            try {
+                message.channel.send(embed);
+                message.delete();
+            } catch (error) {
+                console.log("Error sending message for help command: " + Date());
+                console.log(error);
+                try {
+                    message.channel.send("Something went wrong.");
+                } catch (error) {
+                    console.log("Couldn't send error message to discord.");
+                    console.log(error);
+                }
+            } 
+        }
+        else if(cmd == "bug"){
             try {
                 message.channel.send(`<@${message.author.id}>, attempting to add bug to Trello.`);
             } catch (error) {
