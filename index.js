@@ -42,7 +42,7 @@ client.on('message', async message => {
                 .setColor(2072139)
                 .setDescription('*Server Prefix is "."*')
                 .addField("Basic Commands", "**.help**  Displays a list of commands and gives a description.\n\n**.ping**  Command checks if the bot is online by making the bot send a message.\n\n**.bug <details>**  Command adds a bug to the Developmnt Trello.")
-                .setFooter(`${client.user.username}`, "https://cdn.discordapp.com/app-icons/765041878822813726/e01d25388af1ccb3347108a1fad425e8.png");
+                .setFooter(`${client.user.username}`, "https://cdn.discordapp.com/icons/829673260341133322/4a659db8f2db856e3537b8b7765f81ec.png");
 
             try {
                 message.channel.send(embed);
